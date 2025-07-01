@@ -8,7 +8,7 @@ import '../../../generated/l10n.dart';
 import '../../utils/route_observer.dart';
 import '../../utils/themes/app_themes.dart';
 import '../../utils/themes/design_system_text_style.dart';
-import '../blank/blank_page.dart';
+import '../home/home_page.dart';
 
 class BookCatalogueApp extends StatelessWidget {
   const BookCatalogueApp({super.key});
@@ -33,7 +33,7 @@ class BookCatalogueApp extends StatelessWidget {
           theme: appTheme(),
           darkTheme: ThemeData.dark(),
           onGenerateRoute: CustomRoute.getRouteGenerate,
-          home: const BlankPage(),
+          home: const HomePage(),
           builder: (context, child) {
             return MediaQuery(
               data: MediaQuery.of(

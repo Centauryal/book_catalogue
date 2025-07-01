@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../presentation/blank/blank_page.dart';
+import '../presentation/home/home_page.dart';
 import 'route_names.dart';
 
 class CustomRoute {
@@ -12,7 +13,7 @@ class CustomRoute {
       case RouteNames.home:
         return PageRouteBuilder(
           settings: settings,
-          pageBuilder: (_, __, ___) => const BlankPage(),
+          pageBuilder: (_, __, ___) => const HomePage(),
         );
       default:
         return blankPage;

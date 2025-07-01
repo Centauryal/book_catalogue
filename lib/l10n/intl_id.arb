@@ -1,4 +1,6 @@
 {
   "title": "Book Catalogue",
-  "labelPageNotFound": "Page Not Found"
+  "labelPageNotFound": "Page Not Found",
+  "labelBooks": "Books",
+  "labelLiked": "Liked"
 }
