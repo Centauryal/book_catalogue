@@ -4,6 +4,9 @@ import 'books_response.dart';
 extension BooksResponseExt on BooksResponse {
   ListBookModel toDomain() {
     return ListBookModel(
+      count: count,
+      next: next,
+      previous: previous,
       data: resultsBook
           ?.map(
             (e) => BookModel(

@@ -1,16 +1,38 @@
 class ListBookModel {
-  ListBookModel({this.data});
+  ListBookModel({this.count, this.data, this.next, this.previous});
+
+  final int? count;
   final List<BookModel>? data;
+  final String? next;
+  final String? previous;
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is ListBookModel &&
           runtimeType == other.runtimeType &&
-          data == other.data;
+          count == other.count &&
+          data == other.data &&
+          next == other.next &&
+          previous == other.previous;
 
   @override
-  int get hashCode => data.hashCode;
+  int get hashCode =>
+      count.hashCode ^ data.hashCode ^ next.hashCode ^ previous.hashCode;
+
+  ListBookModel copyWith({
+    int? count,
+    List<BookModel>? data,
+    String? next,
+    String? previous,
+  }) {
+    return ListBookModel(
+      count: count ?? this.count,
+      data: data ?? this.data,
+      next: next ?? this.next,
+      previous: previous ?? this.previous,
+    );
+  }
 }
 
 class BookModel {

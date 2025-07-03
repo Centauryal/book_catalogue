@@ -1,10 +1,10 @@
-import 'package:book_catalogue/src/navigator/custom_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:navigation_history_observer/navigation_history_observer.dart';
 
 import '../../../generated/l10n.dart';
+import '../../navigator/custom_route.dart';
 import '../../utils/route_observer.dart';
 import '../../utils/themes/app_themes.dart';
 import '../../utils/themes/design_system_text_style.dart';

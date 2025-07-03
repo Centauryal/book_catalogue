@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../generated/l10n.dart';
 import '../../utils/themes/design_system_color.dart';
 import '../../utils/themes/design_system_text_style.dart';
+import '../books/book_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -39,6 +40,10 @@ class _HomePageState extends State<HomePage>
         ),
         bottom: TabBar(
           controller: tabController,
+          labelStyle: DesignSystemTextStyle.current.body1Bold,
+          labelColor: kMainPrimary,
+          unselectedLabelStyle: DesignSystemTextStyle.current.body2Regular
+              .copyWith(color: kTypographyBlackLow),
           tabs: [
             Tab(text: S.current.labelBooks),
             Tab(text: S.current.labelLiked),
@@ -49,9 +54,7 @@ class _HomePageState extends State<HomePage>
         controller: tabController,
         physics: const NeverScrollableScrollPhysics(),
         children: [
-          Center(
-            child: Text('Tab 1', style: DesignSystemTextStyle.current.heading4),
-          ),
+          const BookPage(),
           Center(
             child: Text('Tab 2', style: DesignSystemTextStyle.current.heading4),
           ),

@@ -18,14 +18,14 @@ class BooksResponse {
     return BooksResponse(
       count: asT<int>(json['count']),
       next: asT<String>(json['next']),
-      previous: asT<Object>(json['previous']),
+      previous: asT<String>(json['previous']),
       resultsBook: resultsBook,
     );
   }
 
   final int? count;
   final String? next;
-  final Object? previous;
+  final String? previous;
   final List<Book>? resultsBook;
 
   @override

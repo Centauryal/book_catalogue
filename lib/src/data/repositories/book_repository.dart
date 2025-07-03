@@ -9,13 +9,15 @@ import '../utils/restful_clients.dart';
 import '../utils/result_response/app_error.dart';
 
 class BookRepository {
-  Future<AppStateResult<ListBookModel, RestfulResultInformation>>
-  getBooks() async {
+  Future<AppStateResult<ListBookModel, RestfulResultInformation>> getBooks({
+    int page = 1,
+  }) async {
     try {
       final response =
           await RestfulClientProvider.getResultResponseRestful<BooksResponse>(
             MethodRestful.get,
             Endpoints.books,
+            queryParameters: {'page': page.toString()},
           );
 
       final domain = response.data?.toDomain();

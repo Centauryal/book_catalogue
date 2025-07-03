@@ -30,7 +30,10 @@ class ResultResponse<T> {
       debugPrint("ERROR: Failed to convert ResultResponse to JSON");
     }
 
-    return ResultResponse(data: _asTLogger<T>(data, 'data'), appError: error);
+    return ResultResponse(
+      data: _asTLogger<T>(data, 'results'),
+      appError: error,
+    );
   }
 
   ResultResponse<T> copyWith({T? data, int? statusCode, AppError? appError}) {

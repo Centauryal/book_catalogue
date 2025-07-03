@@ -19,7 +19,7 @@ void main() async {
         DeviceOrientation.portraitUp,
       ]);
 
-      runApp(const BookCatalogueApp());
+      runApp(BookCatalogueApp());
     },
     (error, stack) {
       debugPrint('run zoned guarded, error: $error, stackTrace: $stack');
