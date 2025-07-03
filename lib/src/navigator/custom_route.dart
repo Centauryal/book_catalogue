@@ -1,6 +1,6 @@
+import 'package:book_catalogue/src/domain/entities/detail_model.dart';
 import 'package:flutter/material.dart';
 
-import '../domain/entities/book_model.dart';
 import '../presentation/blank/blank_page.dart';
 import '../presentation/detail/detail_page.dart';
 import '../presentation/home/home_page.dart';
@@ -18,13 +18,13 @@ class CustomRoute {
           pageBuilder: (_, __, ___) => const HomePage(),
         );
       case RouteNames.detail:
-        if (settings.arguments is! BookModel) {
+        if (settings.arguments is! DetailModel) {
           return blankPage;
         }
-        var arguments = settings.arguments as BookModel;
+        var arguments = settings.arguments as DetailModel;
         return PageRouteBuilder(
           settings: settings,
-          pageBuilder: (_, __, ___) => DetailPage(bookModel: arguments),
+          pageBuilder: (_, __, ___) => DetailPage(detailModel: arguments),
         );
       default:
         return blankPage;

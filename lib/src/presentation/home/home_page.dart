@@ -1,3 +1,4 @@
+import 'package:book_catalogue/src/presentation/liked/liked_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../generated/l10n.dart';
@@ -53,12 +54,7 @@ class _HomePageState extends State<HomePage>
       body: TabBarView(
         controller: tabController,
         physics: const NeverScrollableScrollPhysics(),
-        children: [
-          const BookPage(),
-          Center(
-            child: Text('Tab 2', style: DesignSystemTextStyle.current.heading4),
-          ),
-        ],
+        children: [const BookPage(), const LikedPage()],
       ),
     );
   }

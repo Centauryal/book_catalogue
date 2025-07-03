@@ -3,5 +3,6 @@
   "labelPageNotFound": "Page Not Found",
   "labelBooks": "Books",
   "labelLiked": "Liked",
-  "labelSummaries": "Summaries"
+  "labelSummaries": "Summaries",
+  "labelEmptyLiked": "Empty Liked"
 }

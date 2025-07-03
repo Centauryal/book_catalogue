@@ -45,8 +45,7 @@ dependencies:
   dio: 5.8.0+1
   dio_smart_retry: 7.0.1
 
-  cached_network_image: 3.4.1
-  flutter_cache_manager: 3.4.1
+  sqflite_sqlcipher: 3.2.0
 
   html_unescape: 2.0.0
 
