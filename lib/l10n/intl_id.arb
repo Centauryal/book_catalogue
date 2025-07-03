@@ -2,5 +2,6 @@
   "title": "Book Catalogue",
   "labelPageNotFound": "Page Not Found",
   "labelBooks": "Books",
-  "labelLiked": "Liked"
+  "labelLiked": "Liked",
+  "labelSummaries": "Summaries"
 }

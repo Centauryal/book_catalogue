@@ -48,7 +48,6 @@ class BookViewModel extends BaseViewModel {
         _currentPage = 1;
       }
 
-      debugPrint('_listBookModel ${_listBookModel?.length}');
       _isLastPage = data?.next?.isEmpty == true;
     } on AppError catch (e) {
       debugPrint('error AppError get list book, $e');

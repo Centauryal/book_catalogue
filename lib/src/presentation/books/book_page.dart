@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 
 import '../../data/repositories/book_repository.dart';
 import '../../domain/entities/book_model.dart';
+import '../../navigator/route_names.dart';
 import '../../utils/mvvm/components/mvvm_builder.dart';
 import '../../utils/themes/design_system_text_style.dart';
 

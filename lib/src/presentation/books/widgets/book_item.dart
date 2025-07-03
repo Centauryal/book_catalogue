@@ -11,9 +11,8 @@ class BookItem extends StatelessWidget {
     final isAuthors = authors?.isEmpty == true || authors == null;
     final authorValue = isAuthors ? '-' : authors.first.name;
     return GestureDetector(
-      onTap: () {
-        /// TODO Go To Detail
-      },
+      onTap: () =>
+          Navigator.pushNamed(context, RouteNames.detail, arguments: bookModel),
       child: Card(
         child: Container(
           width: 1.sw,
