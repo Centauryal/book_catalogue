@@ -70,6 +70,7 @@ class DetailPage extends StatelessWidget {
                           );
                         }
                       } else {
+                        final book = bookModel.copyWith(author: authorValue);
                         final message = await viewModel.saveLikedBook(
                           bookModel,
                         );

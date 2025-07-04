@@ -93,6 +93,7 @@ class BookModel {
         ' id: $id,'
         ' title: $title,'
         ' authors: $authors,'
+        ' author: $author,'
         ' summaries: $summaries,'
         ' copyright: $copyright,'
         ' mediaType: $mediaType,'
@@ -104,7 +105,9 @@ class BookModel {
     int? id,
     String? title,
     List<AuthorsModel>? authors,
+    String? author,
     List<String>? summaries,
+    String? summary,
     bool? copyright,
     String? mediaType,
     int? downloadCount,
@@ -113,7 +116,9 @@ class BookModel {
       id: id ?? this.id,
       title: title ?? this.title,
       authors: authors ?? this.authors,
+      author: author ?? this.author,
       summaries: summaries ?? this.summaries,
+      summary: summary ?? this.summary,
       copyright: copyright ?? this.copyright,
       mediaType: mediaType ?? this.mediaType,
       downloadCount: downloadCount ?? this.downloadCount,
@@ -123,11 +128,13 @@ class BookModel {
   Map<String, dynamic> toMap() {
     final authors = this.authors;
     final isAuthors = authors?.isEmpty == true || authors == null;
-    final authorValue = isAuthors ? '-' : authors.first.name;
+    final authorRemote = isAuthors ? '-' : authors.first.name;
+    final authorValue = isAuthors ? author : authorRemote;
 
     final summaries = this.summaries;
     final isSummaries = summaries?.isEmpty == true || summaries == null;
-    final summariesValue = isSummaries ? '-' : summaries.first.decodeApiHtml();
+    final summariesRemote = isSummaries ? '-' : summaries.first.decodeApiHtml();
+    final summariesValue = isSummaries ? summary : summariesRemote;
     return {
       'id': id,
       'title': title,
